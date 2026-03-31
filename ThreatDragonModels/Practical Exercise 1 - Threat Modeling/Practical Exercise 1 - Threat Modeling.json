@@ -807,7 +807,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "payment gateway is\n partially\ntrusted as output must\n still be validated",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -815,17 +815,23 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "payment gateway is\n partially\ntrusted as output must\n still be validated"
             ],
             "id": "5dfebda0-adb6-4cb0-84d9-8b1c8833b096",
             "source": {
-              "x": 740,
-              "y": -520
+              "x": 760,
+              "y": -500
             },
             "target": {
-              "x": 740,
-              "y": -50
-            }
+              "x": 760,
+              "y": -30
+            },
+            "vertices": [
+              {
+                "x": 620,
+                "y": -270
+              }
+            ]
           }
         ]
       },
