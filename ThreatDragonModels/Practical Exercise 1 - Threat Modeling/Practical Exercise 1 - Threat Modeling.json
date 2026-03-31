@@ -845,7 +845,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Payment Gateway is\n partially\ntrusted as output must\n still be validated",
+              "name": " Third-Party Service\n (Partially Trusted)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -853,7 +853,7 @@
               "containedElements": []
             },
             "labels": [
-              "Payment Gateway is\n partially\ntrusted as output must\n still be validated"
+              " Third-Party Service\n (Partially Trusted)"
             ],
             "id": "5dfebda0-adb6-4cb0-84d9-8b1c8833b096",
             "source": {
@@ -862,7 +862,7 @@
             },
             "target": {
               "x": 840,
-              "y": -50
+              "y": -70
             },
             "vertices": [
               {
