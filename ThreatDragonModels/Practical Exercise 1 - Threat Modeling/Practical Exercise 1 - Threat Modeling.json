@@ -1978,7 +1978,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1999,13 +2000,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "a5041e0f-254b-4bbe-b223-dd71bc1b0f24",
+                  "title": "Order Data Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker could modify order details (e.g., items, quantities, prices, status) in transit or at rest.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 51,
+                  "score": ""
+                },
+                {
+                  "id": "da01de4d-d9ba-43af-8aae-bc3f9e164fe2",
+                  "title": "Staff Credential Disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Exposure of usernames, passwords, or session tokens for staff members due to insecure storage or unencrypted transmission.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 52,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Updated \norder status"
@@ -2024,7 +2057,17 @@
                 "x": 200,
                 "y": -20
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ]
       },
@@ -3660,6 +3703,6 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 50
+    "threatTop": 52
   }
 }
