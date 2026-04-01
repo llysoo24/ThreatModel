@@ -2967,6 +2967,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -3050,7 +3051,6 @@
               ]
             },
             "id": "c6d0d8eb-001a-4c27-b492-8b7b14d41bb1",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Administrator",
@@ -3084,6 +3084,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -3167,7 +3168,6 @@
               ]
             },
             "id": "28563a5a-268b-41c0-97a4-8156e27ccc62",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web App\nServer",
@@ -3296,6 +3296,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -3379,7 +3380,6 @@
               ]
             },
             "id": "7175f6b2-4b30-4e4a-88f8-d42c5ebbe9fd",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "MongoDB Database",
@@ -3459,7 +3459,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -3480,13 +3481,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "ab6686d8-ca80-4c56-9383-43f6ccab411b",
+                  "title": "Menu Data Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker could alter menu item data (e.g., prices or descriptions) before it is stored in the database.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 55,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "New menu item details"
@@ -3502,8 +3522,20 @@
             },
             "vertices": [
               {
-                "x": 310,
+                "x": 180,
+                "y": 80
+              },
+              {
+                "x": 260,
                 "y": 50
+              },
+              {
+                "x": 380,
+                "y": 50
+              },
+              {
+                "x": 440,
+                "y": 80
               }
             ]
           },
@@ -3692,6 +3724,10 @@
             },
             "vertices": [
               {
+                "x": 300,
+                "y": 50
+              },
+              {
                 "x": 240,
                 "y": 160
               }
@@ -3736,6 +3772,6 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 54
+    "threatTop": 55
   }
 }
